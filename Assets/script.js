@@ -39,15 +39,15 @@ $(document).ready(function() {
         const searchTerm = searchInputEl.val();
         console.log(searchInputEl.val());
 
-        const queryURL =  `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerms}&api-key=vW98uWc5IvP1AlTsCIGOekDaEbGr0fNE`;
+        const queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&api-key=vW98uWc5IvP1AlTsCIGOekDaEbGr0fNE`;
         //buildQueryURL();
 
         $.get(queryURL).then(function(response) {
             console.log (response);
         });
-    };
+    });
+});
 
-}
 
     // Need event listeners for buttons
     // Need $.get for url with search terms
