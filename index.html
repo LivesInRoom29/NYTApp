@@ -22,11 +22,22 @@
                 </div>
                 <div class="form-group">
                     <label for="num-records">Number of Records to Retrieve:</label>
-                    <select class="form-control" id="num-records">
-                        <option>1</option>
-                        <option>5</option>
-                        <option>10</option>
-                    </select>
+                    <br>
+                    <div class="form-check form-check-inline" id="num-records">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="10">
+                        <label class="form-check-label" for="inlineRadio3">10</label>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="start-year">Start Year (Optional)</label>
@@ -36,17 +47,28 @@
                     <label for="end-year">End Year (Optional)</label>
                     <input type="text" class="form-control" id="end-year">
                 </div>
-                <button type="submit" class="btn btn-primary">Search</button>
-                <button type="button" class="btn btn-primary">Clear Results</button>
+                <button type="submit" id="search-btn" class="btn btn-primary">Search</button>
+                <button type="button" id="clear-btn" class="btn btn-primary">Clear Results</button>
             </form>
         </div>
         <div id="articles" class="container">
             <p class=h4>Top Articles</p>
             <!-- articles go here -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="article-title" class="card-title">Sample NYT Article</h5>
+                    <h6 id="article-author" class="card-subtitle mb-2 text-muted">Article Author</h6>
+                    <h6 id="article-section" class="card-subtitle mb-2 text-muted">Article Section</h6>
+                    <h6 id="article-date" class="card-subtitle mb-2 text-muted">Article Date</h6>
+                    <a href="#" id="article-url" class="card-link">Article Link</a>
+
+                </div>
+            </div>
 
         </div>
     </div>
 
 </body>
+<script src="./Assets/script.js"></script>
 
 </html>
