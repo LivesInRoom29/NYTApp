@@ -12,12 +12,7 @@ $(document).ready(function() {
 
 }
 
-
     // Need event listeners for buttons
     // Need $.get for url with search terms
 
-
-
     // const searchTerms will come from the input field
-
-    $.get(queryURL).then(function(response) {});
