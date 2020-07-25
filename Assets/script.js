@@ -32,8 +32,8 @@ $(document).ready(function() {
             .trim()
     }
 
-    $("button.search-btn").on("click", function() {
-        //event.preventDefault();
+    $("#search-btn").on("click", function() {
+        event.preventDefault();
         console.log(this);
 
         const searchTerm = searchInputEl.val();
