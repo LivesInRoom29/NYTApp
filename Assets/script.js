@@ -33,21 +33,20 @@ $(document).ready(function() {
     }
 
     $("button.search-btn").on("click", function() {
-        event.preventDefault();
+        //event.preventDefault();
+        console.log(this);
 
-        const searchTerm = searchInputEl.val()
+        const searchTerm = searchInputEl.val();
+        console.log(searchInputEl.val());
 
-        const queryURL =  buildQueryURL();
+        const queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&api-key=vW98uWc5IvP1AlTsCIGOekDaEbGr0fNE`;
+        //buildQueryURL();
 
         $.get(queryURL).then(function(response) {
             console.log (response);
         });
-    };
-
-}
-
-
-
+    });
+});
 
 
     // Need event listeners for buttons
