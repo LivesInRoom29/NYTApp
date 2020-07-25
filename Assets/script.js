@@ -2,10 +2,10 @@
 //API key for nyt: vW98uWc5IvP1AlTsCIGOekDaEbGr0fNE
 $(document).ready(function() {
     // variables for HTML elements:
-    const searchInputEl = $();
-    const recordsNumEl = $();
-    const startyearEl = $();
-    const endYearEl = $();
+    const searchInputEl = $('#search-term');
+    const recordsNumEl = $('#num-records');
+    const startyearEl = $('#start-year');
+    const endYearEl = $('#end-year');
 
     function buildQueryURL() {
 
@@ -32,11 +32,23 @@ $(document).ready(function() {
             .trim()
     }
 
-    const queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerms}&api-key=vW98uWc5IvP1AlTsCIGOekDaEbGr0fNE`;
+    $("button.search-btn").on("click", function() {
+        event.preventDefault();
 
-    $.get(queryURL).then(function(response) {});
+        const searchTerm = searchInputEl.val()
+
+        const queryURL =  buildQueryURL();
+
+        $.get(queryURL).then(function(response) {
+            console.log (response);
+        });
+    };
 
 }
+
+
+
+
 
     // Need event listeners for buttons
     // Need $.get for url with search terms
