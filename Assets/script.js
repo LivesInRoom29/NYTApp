@@ -20,4 +20,4 @@ function buildQueryURL() {
 
     var endYear = $("#end-year")
         .val()
-        .trim();
+        .trim()
